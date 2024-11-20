@@ -8,7 +8,7 @@ import { AIMessage } from "@/ai/message";
 import { Calories, CaloriesLoading } from "@/components/prebuilt/calories";
 import { Menu, MenuLoading, MenuProps } from "@/components/prebuilt/menu";
 
-const API_URL = "http://localhost:7800/chat";
+const API_URL = "http://145.223.117.210:7800/chat";
 
 type ToolComponent = {
     loading: (props?: any) => JSX.Element;

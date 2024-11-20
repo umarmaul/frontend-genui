@@ -11,7 +11,7 @@ export async function GET(request: Request) {
             ?.split("=")[1] || "";
 
     const messageHistory = new PostgresChatMessageHistory({
-        tableName: "test_table",
+        tableName: "history",
         sessionId: sessionId,
         pool,
     });
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
             ?.split("=")[1] || "";
 
     const messageHistory = new PostgresChatMessageHistory({
-        tableName: "test_table",
+        tableName: "history",
         sessionId: sessionId,
         pool,
     });
