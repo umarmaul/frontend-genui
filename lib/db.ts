@@ -1,12 +1,14 @@
 import pg from "pg";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const poolConfig = {
-    host: "145.223.117.210",
-    port: 6543,
-    user: "postgres",
-    password:
-        "Ep99DiEJ05RxqEjtgHPVG9O1JSIGDSvXgEMgv4x3OWgIl9XuMN9vHJo7FeIJD623",
-    database: "postgres",
+    host: process.env.DB_HOST,
+    port: parseInt(process.env.DB_PORT || "5432"),
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
 };
 
 export const pool = new pg.Pool(poolConfig);
